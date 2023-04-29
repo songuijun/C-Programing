@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _USE_MATH_DEFINES     // M_PI¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ Ãß°¡
+#define _USE_MATH_DEFINES     // M_PIë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œ ì¶”ê°€
 #include <math.h>
 
 #define SHOW          1
@@ -24,21 +24,21 @@ void Excersize_2_24(int solution, int answer)
 
 	printf("\n\n");
 	printf("2-24 \n");
-	printf("³ôÀÌ°¡ %5.2lf mÀÎ 10Ãş ¿Á»ó¿¡¼­ \n", height);
-	printf("°øÀ» ¼öÆò¹æÇâÀ¸·Î ÃÊ¼Óµµ %5.2lf m/s·Î ´øÁ³´Ù. \n\n", second_velocity);
-	printf("(a) °øÀÌ Áö¸é¿¡ ¶³¾îÁö´Â µ¥ °É¸®´Â ½Ã°£Àº ¾ó¸¶ÀÎ°¡? \n");
+	printf("ë†’ì´ê°€ %5.2lf mì¸ 10ì¸µ ì˜¥ìƒì—ì„œ \n", height);
+	printf("ê³µì„ ìˆ˜í‰ë°©í–¥ìœ¼ë¡œ ì´ˆì†ë„ %5.2lf m/së¡œ ë˜ì¡Œë‹¤. \n\n", second_velocity);
+	printf("(a) ê³µì´ ì§€ë©´ì— ë–¨ì–´ì§€ëŠ” ë° ê±¸ë¦¬ëŠ” ì‹œê°„ì€ ì–¼ë§ˆì¸ê°€? \n");
 
 	if (solution == SHOW)
 	{
 		printf("\n\n\n");
-		printf("==============================  Ç®ÀÌ  ===================================\n");
+		printf("==============================  í’€ì´  ===================================\n");
 		// your code here
 		t = sqrt(height / (1.0 / 2.0 * gravitational_acceleration) ) ;
 	
 
-		printf("µî°¡¼Óµµ ¿îµ¿°ø½ÄÀ» ÀÌ¿ëÇÕ´Ï´Ù. \n");
-		printf("S = x0 + v0 x t + (1/2) x a x t^2 \n");
-		printf("¹®ÀÚ¿¡ ¼ıÀÚ¸¦ ´ëÀÔÇÕ´Ï´Ù. \n");
+		printf("ë“±ê°€ì†ë„ ìš´ë™ê³µì‹ì„ ì´ìš©í•©ë‹ˆë‹¤. \n");
+		printf(" = x0 + v0 x t + (1/2) x a x t^2 \n");
+		printf("ë¬¸ìì— ìˆ«ìë¥¼ ëŒ€ì…í•©ë‹ˆë‹¤. \n");
 		printf("%5.2lf m = %5.2lf m + %5.2lf sec + 1/2 x %5.2lf m/s^2 x t^2 \n", height ,x0,v0, gravitational_acceleration);
 		printf("t = %5.2lf sec \n",t);
 
@@ -46,27 +46,27 @@ void Excersize_2_24(int solution, int answer)
 		printf("\n\n\n");
 	}
 	if (answer == SHOW){
-		printf("=========================   Á¤ ´ä   =============================\n");
+		printf("=========================   ì • ë‹µ   =============================\n");
 
-		printf("t¸¦ °è»êÇÕ´Ï´Ù. \n");
+		printf("të¥¼ ê³„ì‚°í•©ë‹ˆë‹¤. \n");
 		printf("t = %5.2lf sec \n", t);
 
 		printf("=================================================================\n");
 		printf("\n\n\n");
 	}
 
-	printf("(b) °øÀº °Ç¹°¿¡¼­ ¼öÆòÀ¸·Î ¾ó¸¶ÀÇ °Å¸®¿¡ ¶³¾îÁö´Â°¡?\n");
+	printf("(b) ê³µì€ ê±´ë¬¼ì—ì„œ ìˆ˜í‰ìœ¼ë¡œ ì–¼ë§ˆì˜ ê±°ë¦¬ì— ë–¨ì–´ì§€ëŠ”ê°€?\n");
 
 	if (solution == SHOW)
 	{
 		printf("\n\n\n");
-		printf("==============================  Ç®ÀÌ  ===================================\n");
+		printf("==============================  í’€ì´  ===================================\n");
 		// your code here
 		x = second_velocity * t;
 
-		printf("µî¼Ó ¿îµ¿¿¡¼­ ¹°Ã¼ÀÇ ÀÌµ¿ °Å¸®¸¦ ±¸ÇÏ´Â °ø½ÄÀ» ÀÌ¿ëÇÕ´Ï´Ù. \n");
+		printf("ë“±ì† ìš´ë™ì—ì„œ ë¬¼ì²´ì˜ ì´ë™ ê±°ë¦¬ë¥¼ êµ¬í•˜ëŠ” ê³µì‹ì„ ì´ìš©í•©ë‹ˆë‹¤. \n");
 		printf("x = x0 + v0 m/s x t sec \n");
-		printf("¹®ÀÚ¿¡ ¼ıÀÚ¸¦ ´ëÀÔÇÕ´Ï´Ù. \n");
+		printf("ë¬¸ìì— ìˆ«ìë¥¼ ëŒ€ì…í•©ë‹ˆë‹¤. \n");
 		printf("x = %5.2lf + %5.2lf m/s x %5.2lf sec \n", x0, second_velocity , t);
 		printf("x = %5.2lf m \n", x );
 
@@ -75,8 +75,8 @@ void Excersize_2_24(int solution, int answer)
 		printf("\n\n\n");
 	}
 	if (answer == SHOW) {
-		printf("=========================   Á¤ ´ä   =============================\n");
-		printf("x¸¦ °è»êÇÕ´Ï´Ù. \n");
+		printf("=========================   ì • ë‹µ   =============================\n");
+		printf("xë¥¼ ê³„ì‚°í•©ë‹ˆë‹¤. \n");
 		printf("x = %5.2lf m \n", x);
 		printf("=================================================================\n");
 		printf("\n\n\n");
