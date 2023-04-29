@@ -37,7 +37,7 @@ void Excersize_2_24(int solution, int answer)
 	
 
 		printf("등가속도 운동공식을 이용합니다. \n");
-		printf(" = x0 + v0 x t + (1/2) x a x t^2 \n");
+		printf("x = x0 + v0 x t + (1/2) x a x t^2 \n");
 		printf("문자에 숫자를 대입합니다. \n");
 		printf("%5.2lf m = %5.2lf m + %5.2lf sec + 1/2 x %5.2lf m/s^2 x t^2 \n", height ,x0,v0, gravitational_acceleration);
 		printf("t = %5.2lf sec \n",t);
