@@ -1,7 +1,0 @@
-﻿  24.cpp
-C:\Users\user\Desktop\나는 과제 폴더야~ 함부로 지우지마\물리\2장\Project1\Project1\24.cpp(46,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
-C:\Users\user\Desktop\나는 과제 폴더야~ 함부로 지우지마\물리\2장\Project1\Project1\24.cpp(49,10): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-C:\Users\user\Desktop\나는 과제 폴더야~ 함부로 지우지마\물리\2장\Project1\Project1\24.cpp(49,10): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
-C:\Users\user\Desktop\나는 과제 폴더야~ 함부로 지우지마\물리\2장\Project1\Project1\24.cpp(49,10): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
-C:\Users\user\Desktop\나는 과제 폴더야~ 함부로 지우지마\물리\2장\Project1\Project1\24.cpp(43): warning C4723: 0의 나누기 연산이 발생할 수 있습니다.
-  Project1.vcxproj -> C:\Users\user\Desktop\나는 과제 폴더야~ 함부로 지우지마\물리\2장\Project1\x64\Debug\Project1.exe
