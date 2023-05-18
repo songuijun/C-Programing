@@ -32,7 +32,7 @@ void Excersize_2_24(int solution, int answer)
 	if (solution == SHOW)
 	{
 		printf("\n\n\n");
-		printf("==============================  풀이  ===================================\n\n");
+		printf("=========================   풀 이   =============================\n\n");
 		// your code here
 		t = sqrt(height / (1.0 / 2.0 * gravitational_acceleration));
 
@@ -61,7 +61,7 @@ void Excersize_2_24(int solution, int answer)
 
 	if (solution == SHOW)
 	{
-		printf("==============================  풀이  ===================================\n\n");
+		printf("=========================   풀 이   =============================\n\n");
 		// your code here
 		x = second_velocity * t;
 		printf("(b) 공은 건물에서 수평으로 얼마의 거리에 떨어지는가? \n");
@@ -72,7 +72,7 @@ void Excersize_2_24(int solution, int answer)
 		printf("x = %5.2lf + %5.2lf m/s x %5.2lf sec \n", x0, second_velocity, t);
 		printf("x = %5.2lf m \n", x);
 
-        printf("\n");
+		printf("\n");
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
@@ -97,7 +97,7 @@ int main(void)
 
 
 	Excersize_2_24(1, 1);
-	
+
 
 
 
