@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _USE_MATH_DEFINES     // M_PI¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ Ãß°¡
+#define _USE_MATH_DEFINES     // M_PIë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œ ì¶”ê°€
 #include <math.h>
 #include <time.h>
 
@@ -15,42 +15,42 @@
 
 void Excersize_2_20(int solution, int answer)
 {
-	double A_car_initial_speed = 24;
+	double A_car_initial_speed = 24;         //ì´ˆê¸° ì†ë„
 	double B_car_initial_speed = 20;
 
-	double A_car_stopping_time = 4;
+	double A_car_stopping_time = 4;          //ì •ì°¨ì— ê±¸ë¦°ì‹œê°„
 	double B_car_stopping_time = 5;
 
-	double A_car_magnitude_of_acceleration;
+	double A_car_magnitude_of_acceleration;  //ê°€ì†ë„
 	double B_car_magnitude_of_acceleration;
 
-	double young = 0;
+	double young = 0;                        
 	double v0 = 0;
-	
+
 	double t = 0;
 	double x = 0;
 
 	printf("\n");
 	printf("2-20 \n");
-	printf(" %5.2lf m/s ·Î ´Ş¸®´ø ÀÚµ¿Â÷ A ¿Í %6.2lf m/s ·Î ´Ş¸®´ø ÀÚµ¿Â÷ B °¡ \n", A_car_initial_speed, B_car_initial_speed);
-	printf("µ¿½Ã¿¡ ºê·¹ÀÌÅ©¸¦ ¹â¾Æ ÀÏÁ¤ÇÏ°Ô °¨¼Ó½ÃÄÑ¼­ ÀÚµ¿Â÷ A ´Â %6.2lf s ¸¸¿¡ B ´Â %6.2lf s ¸¸¿¡ Á¤ÁöÇÏ¿´´Ù. \n", A_car_stopping_time, B_car_stopping_time);
-	printf("(a) ÀÚµ¿Â÷ A¿Í BÀÇ °¡¼ÓµµÀÇ Å©±â´Â °¢°¢ ¾ó¸¶ÀÎ°¡? \n");
-	printf("(b) µÎ ÀÚµ¿Â÷ÀÇ ¼Óµµ°¡ °°¾ÆÁö´Â ¶§´Â ºê·¹ÀÌÅ©¸¦ ¹âÀº ÈÄ ¸î ÃÊ ÈÄÀÎ°¡? \n");
-	printf("(c) ºê·¹ÀÌÅ©¸¦ ¹âÀº ÈÄ Á¤ÁöÇÒ ¶§±îÁö ¾î¶² ÀÚµ¿Â÷°¡ ¾ó¸¶³ª ´õ ¸Ö¸®°¬´Â°¡? \n");
-	printf("(d) ÀÚµ¿Â÷ B°¡ A¿Í °°Àº ºñÀ²·Î °¨¼Ó½ÃÅ²´Ù¸é Á¤ÁöÇÒ ¶§±îÁö °É¸®´Â ½Ã°£Àº ¸î ÃÊÀÎ°¡? \n");
+	printf(" %5.2lf m/s ë¡œ ë‹¬ë¦¬ë˜ ìë™ì°¨ A ì™€ %6.2lf m/s ë¡œ ë‹¬ë¦¬ë˜ ìë™ì°¨ B ê°€ \n", A_car_initial_speed, B_car_initial_speed);
+	printf("ë™ì‹œì— ë¸Œë ˆì´í¬ë¥¼ ë°Ÿì•„ ì¼ì •í•˜ê²Œ ê°ì†ì‹œì¼œì„œ ìë™ì°¨ A ëŠ” %6.2lf s ë§Œì— B ëŠ” %6.2lf s ë§Œì— ì •ì§€í•˜ì˜€ë‹¤. \n", A_car_stopping_time, B_car_stopping_time);
+	printf("(a) ìë™ì°¨ Aì™€ Bì˜ ê°€ì†ë„ì˜ í¬ê¸°ëŠ” ê°ê° ì–¼ë§ˆì¸ê°€? \n");
+	printf("(b) ë‘ ìë™ì°¨ì˜ ì†ë„ê°€ ê°™ì•„ì§€ëŠ” ë•ŒëŠ” ë¸Œë ˆì´í¬ë¥¼ ë°Ÿì€ í›„ ëª‡ ì´ˆ í›„ì¸ê°€? \n");
+	printf("(c) ë¸Œë ˆì´í¬ë¥¼ ë°Ÿì€ í›„ ì •ì§€í•  ë•Œê¹Œì§€ ì–´ë–¤ ìë™ì°¨ê°€ ì–¼ë§ˆë‚˜ ë” ë©€ë¦¬ê°”ëŠ”ê°€? \n");
+	printf("(d) ìë™ì°¨ Bê°€ Aì™€ ê°™ì€ ë¹„ìœ¨ë¡œ ê°ì†ì‹œí‚¨ë‹¤ë©´ ì •ì§€í•  ë•Œê¹Œì§€ ê±¸ë¦¬ëŠ” ì‹œê°„ì€ ëª‡ ì´ˆì¸ê°€? \n");
 
 	if (solution == SHOW)
 	{
 		printf("\n");
-		printf("=========================   Ç® ÀÌ   =============================\n\n");
+		printf("=========================   í’€ ì´   =============================\n\n");
 		// your code here
 		A_car_magnitude_of_acceleration = (v0 - A_car_initial_speed) / A_car_stopping_time;
 		B_car_magnitude_of_acceleration = (v0 - B_car_initial_speed) / B_car_stopping_time;
 
-		printf("(a) ÀÚµ¿Â÷ A¿Í BÀÇ °¡¼ÓµµÀÇ Å©±â´Â °¢°¢ ¾ó¸¶ÀÎ°¡? \n\n");
+		printf("(a) ìë™ì°¨ Aì™€ Bì˜ ê°€ì†ë„ì˜ í¬ê¸°ëŠ” ê°ê° ì–¼ë§ˆì¸ê°€? \n\n");
 
-		printf("°ü·Ã °ø½ÄÀº a = ¥Äv / ¥Ät \n");
-		printf("a: °¡¼Óµµ, ¥Äv: ¼Óµµ º¯È­·®, ¥Ät: ½Ã°£ º¯È­·®\n");
+		printf("ê´€ë ¨ ê³µì‹ì€ a = Î”v / Î”t \n");
+		printf("a: ê°€ì†ë„, Î”v: ì†ë„ ë³€í™”ëŸ‰, Î”t: ì‹œê°„ ë³€í™”ëŸ‰\n");
 		printf("\n");
 
 		printf("A car  aA = %6.2lf m/s - %6.2lf m/s / %6.2lf s = %6.2lf m/s^2 \n", young, A_car_initial_speed, A_car_stopping_time, A_car_magnitude_of_acceleration);
@@ -59,10 +59,10 @@ void Excersize_2_20(int solution, int answer)
 		printf("\n");
 	}
 	if (answer == SHOW) {
-		printf("=========================   Á¤ ´ä   =============================\n\n");
+		printf("=========================   ì • ë‹µ   =============================\n\n");
 
-		printf("ÀÚµ¿Â÷ AÀÇ °¡¼ÓµµÀÇ Å©±â: %6.2lf m/s^2 \n", A_car_magnitude_of_acceleration);
-		printf("ÀÚµ¿Â÷ BÀÇ °¡¼ÓµµÀÇ Å©±â; %6.2lf m/s^2 \n", B_car_magnitude_of_acceleration);
+		printf("ìë™ì°¨ Aì˜ ê°€ì†ë„ì˜ í¬ê¸°: %6.2lf m/s^2 \n", A_car_magnitude_of_acceleration);
+		printf("ìë™ì°¨ Bì˜ ê°€ì†ë„ì˜ í¬ê¸°; %6.2lf m/s^2 \n", B_car_magnitude_of_acceleration);
 
 		printf("\n");
 	}
@@ -71,21 +71,25 @@ void Excersize_2_20(int solution, int answer)
 
 	if (solution == SHOW)
 	{
-		printf("=========================   Ç® ÀÌ   =============================\n\n");
+		printf("=========================   í’€ ì´   =============================\n\n");
 		// your code here
-		printf("(b) µÎ ÀÚµ¿Â÷ÀÇ ¼Óµµ°¡ °°¾ÆÁö´Â ¶§´Â ºê·¹ÀÌÅ©¸¦ ¹âÀº ÈÄ ¸î ÃÊ ÈÄÀÎ°¡? \n\n");
-		
-		printf("°ü·Ã °ø½ÄÀº v = v0 / at \n");
-		printf("v: ³ªÁß ¼Óµµ, v0: Ã³À½ ¼Óµµ, a: °¡¼Óµµ, t: ½Ã°£\n");
+		t = (A_car_initial_speed - B_car_initial_speed) / 2;
+
+		printf("(b) ë‘ ìë™ì°¨ì˜ ì†ë„ê°€ ê°™ì•„ì§€ëŠ” ë•ŒëŠ” ë¸Œë ˆì´í¬ë¥¼ ë°Ÿì€ í›„ ëª‡ ì´ˆ í›„ì¸ê°€? \n\n");
+
+		printf("ê´€ë ¨ ê³µì‹ì€ v = v0 / at \n");
+		printf("v: ë‚˜ì¤‘ ì†ë„, v0: ì²˜ìŒ ì†ë„, a: ê°€ì†ë„, t: ì‹œê°„\n");
 		printf("\n");
 
-		printf("");
-
+		printf("vA = vB = v0 + at\n");
+		printf("%6.2lf m/s + (%6.2lf m/s^2) * t = %6.2lf m/s + (%6.2lf m/s^2) * t \n", A_car_initial_speed, A_car_magnitude_of_acceleration, B_car_initial_speed, B_car_magnitude_of_acceleration);
+		printf("                              t = %6.2lf s", t);
 		printf("\n");
 	}
 	if (answer == SHOW) {
-		printf("=========================   Á¤ ´ä   =============================\n\n");
-		
+		printf("=========================   ì • ë‹µ   =============================\n\n");
+
+		printf("ë‘ ìë™ì°¨ì˜ ì†ë„ê°€ ê°™ì•„ì§€ëŠ” ë•ŒëŠ” ë¸Œë ˆì´í¬ë¥¼ ë°Ÿì€ í›„ %6.2lf s í›„ ì…ë‹ˆë‹¤.\n ",t);
 
 		printf("\n");
 	}
@@ -94,36 +98,43 @@ void Excersize_2_20(int solution, int answer)
 	if (solution == SHOW)
 	{
 		printf("\n");
-		printf("=========================   Ç® ÀÌ   =============================\n\n");
+		printf("=========================   í’€ ì´   =============================\n\n");
 		// your code here
-		
 
-		printf("(c) ºê·¹ÀÌÅ©¸¦ ¹âÀº ÈÄ Á¤ÁöÇÒ ¶§±îÁö ¾î¶² ÀÚµ¿Â÷°¡ ¾ó¸¶³ª ´õ ¸Ö¸®°¬´Â°¡? \n\n");
 
+		printf("(c) ë¸Œë ˆì´í¬ë¥¼ ë°Ÿì€ í›„ ì •ì§€í•  ë•Œê¹Œì§€ ì–´ë–¤ ìë™ì°¨ê°€ ì–¼ë§ˆë‚˜ ë” ë©€ë¦¬ê°”ëŠ”ê°€? \n\n");
+
+		printf("ê´€ë ¨ ê³µì‹ì€ x = v0 * t + (1/2) * a * t^2\n");
+		printf("x: ê±°ë¦¬, v0: ì´ˆê¸° ì†ë„ ,t: ì‹œê°„ , a: ê°€ì†ë„\n");
+		printf("\n");
+
+		printf("A car  x = %6.2lf m/s * %6.2lf s  + (1/2) * (%6.2lf m/s^2) * %6.2lf s\n", A_car_initial_speed, A_car_stopping_time, A_car_magnitude_of_acceleration, A_car_stopping_time);
+		printf("B car  x = %6.2lf m/s * %6.2lf s  + (1/2) * (%6.2lf m/s^2) * %6.2lf s\n", B_car_initial_speed, B_car_stopping_time, B_car_magnitude_of_acceleration, B_car_stopping_time);
 
 		printf("\n");
 	}
 	if (answer == SHOW) {
-		printf("=========================   Á¤ ´ä   =============================\n\n");
+		printf("=========================   ì • ë‹µ   =============================\n\n");
 
-
+		printf("ë ˆì´í¬ë¥¼ ë°Ÿì€ í›„ ì •ì§€í•  ë•Œê¹Œì§€ ìë™ì°¨ê°€ ì´ë™í•œê±°ë¦¬\n");
+		printf("A car x = %6.2lf",t);
 
 		printf("\n");
 	}
 
 	if (solution == SHOW)
 	{
-		printf("=========================   Ç® ÀÌ   =============================\n\n");
+		printf("=========================   í’€ ì´   =============================\n\n");
 		// your code here
-	
-		printf("(d) ÀÚµ¿Â÷ B°¡ A¿Í °°Àº ºñÀ²·Î °¨¼Ó½ÃÅ²´Ù¸é Á¤ÁöÇÒ ¶§±îÁö °É¸®´Â ½Ã°£Àº ¸î ÃÊÀÎ°¡? \n\n");
+
+		printf("(d) ìë™ì°¨ Bê°€ Aì™€ ê°™ì€ ë¹„ìœ¨ë¡œ ê°ì†ì‹œí‚¨ë‹¤ë©´ ì •ì§€í•  ë•Œê¹Œì§€ ê±¸ë¦¬ëŠ” ì‹œê°„ì€ ëª‡ ì´ˆì¸ê°€? \n\n");
 
 
 
 		printf("\n");
 	}
 	if (answer == SHOW) {
-		printf("=========================   Á¤ ´ä   =============================\n\n");
+		printf("=========================   ì • ë‹µ   =============================\n\n");
 
 
 
