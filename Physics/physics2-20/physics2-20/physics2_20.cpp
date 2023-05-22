@@ -15,16 +15,17 @@
 
 void Excersize_2_20(int solution, int answer)
 {
-	double A_car_initial_speed = 24;         //초기 속도
-	double B_car_initial_speed = 20;
+	srand(time(NULL));
+	double A_car_initial_speed = 24 + rand() % (12 + 1) - 6;         //초기 속도
+	double B_car_initial_speed = 20 + rand() % (10 + 1) - 5;
 
-	double A_car_stopping_time = 4;          //정차에 걸린시간
-	double B_car_stopping_time = 5;
+	double A_car_stopping_time = 4 + rand() % (2 + 1) - 2;          //정차에 걸린시간
+	double B_car_stopping_time = 5 + rand() % (2 + 1) - 1;
 
 	double A_car_magnitude_of_acceleration;  //가속도
 	double B_car_magnitude_of_acceleration;
 
-	double young = 0;                        
+	double young = 0;
 	double v0 = 0;
 
 	double t = 0;
@@ -89,7 +90,7 @@ void Excersize_2_20(int solution, int answer)
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("두 자동차의 속도가 같아지는 때는 브레이크를 밟은 후 %6.2lf s 후 입니다.\n ",t);
+		printf("두 자동차의 속도가 같아지는 때는 브레이크를 밟은 후 %6.2lf s 후 입니다.\n ", t);
 
 		printf("\n");
 	}
@@ -117,7 +118,8 @@ void Excersize_2_20(int solution, int answer)
 		printf("=========================   정 답   =============================\n\n");
 
 		printf("레이크를 밟은 후 정지할 때까지 자동차가 이동한거리\n");
-		printf("A car x = %6.2lf",t);
+		printf("A car x = %6.2lf", A_car_initial_speed * A_car_stopping_time + (1/2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
+		printf("B car x = %6.2lf", B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
 
 		printf("\n");
 	}
