@@ -16,7 +16,7 @@
 void Excersize_2_24(int solution, int answer)
 {
 	srand(time(NULL));
-	double height = 39.2 + rand() % (10 + 1) - 4 ;
+	double height = 39.2 + rand() % (10 + 1) - 4;
 	double second_velocity = 5 + rand() % (10 + 1) - 2;
 	double gravitational_acceleration = 9.8;
 	double x0 = 0;
@@ -37,29 +37,31 @@ void Excersize_2_24(int solution, int answer)
 		printf("=========================   풀 이   =============================\n\n");
 		// your code here
 		t = sqrt(height / (1.0 / 2.0 * gravitational_acceleration));
-		
-		
+
+
 
 
 		printf("(a) 공이 지면에 떨어지는 데 걸리는 시간은 얼마인가?\n\n");
 
 		printf("관련 공식은 x = x0 + v0 * t + (1/2) * a * t^2 \n");
-		printf("v: 나중 속도, v0: 초기 속도, a: 가속도, t: 시간. \n\n");
+		printf("v: 나중 속도, v0: 초기 속도, a: 가속도, t: 시간, g: 중력 가속도 \n\n");
 
-		printf("연직 아래방향이므로 중력가속도(g)와 처음속도(v0)는 음수값을 가지게 됩니다.\n\n");
+		printf("g는 연직 아래 방향이므로 (-g)로 바뀌게 됩니다.\n\n");
 
-		printf("%5.2lf m = (%5.2lf m) + (%5.2lf m) + t + (1/2) * (%5.2lf m/s^2) * t^2 \n", height, x0, v0, gravitational_acceleration);
-		printf("t^2 = %5.2lf m - %5.2lf m - %5.2lf s / ( 1/2 * %5.2lf m/s^2 )\n", height, x0, v0, gravitational_acceleration);
-		printf("t = %5.2lf s \n", t);
+		printf("x = x0 + v0 * t + (1/2) * a * t^2 \n");
+		printf("%5.2lf m = (%5.2lf m) + (%5.2lf m) + t + (1/2) * (-%5.2lf m/s^2) * t^2 \n", height, x0, v0, gravitational_acceleration);
+		printf("t^2     = (%5.2lf m - %5.2lf m - %5.2lf s) / ( 1/2 * -%5.2lf m/s^2 )\n", height, x0, v0, gravitational_acceleration);
+		printf("        = -%5.2lf s \n\n", height / (1.0 / 2.0 * gravitational_acceleration));
+
+		printf("t = √t^2\n");
+		printf("  = %5.2lf s\n", t);
 
 		printf("\n");
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("공이 지면에 떨어지는 데 걸리는 시간 t = %5.2lf s \n", t);
-
-		printf("\n");
+		printf("공이 지면에 떨어지는 데 걸리는 시간(t) = %5.2lf s \n\n", t);
 	}
 
 
@@ -72,17 +74,18 @@ void Excersize_2_24(int solution, int answer)
 		printf("(b) 공은 건물에서 수평으로 얼마의 거리에 떨어지는가? \n\n");
 
 		printf("관련 공식은 x = x0 + v0 * t  \n");
-		printf("x: 수평거리, x0: 초기거리, v0: 초기 속도, t: 시간. \n\n");
+		printf("x: 수평거리, x0: 초기거리, v0: 초기 속도, t: 시간 \n\n");
 
-		printf("x = %5.2lf + %5.2lf m/s * %5.2lf s \n", x0, second_velocity, t);
+		printf("x = x0 + v0 * t  \n");
+		printf("  = %5.2lf + %5.2lf m/s * %5.2lf s \n", x0, second_velocity, t);
 		printf("  = % 5.2lf m \n", x);
 
 		printf("\n");
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
-		printf("x = %5.2lf m \n\n", x);
-		printf("공은 건물에서 수평으로 %5.2lf m 의 거리에 떨어집니다. \n\n", x);
+		printf("수평으로 떨어지는 거리(x) = %5.2lf m \n\n", x);
+		
 		printf("=================================================================\n");
 		printf("\n\n\n");
 	}
