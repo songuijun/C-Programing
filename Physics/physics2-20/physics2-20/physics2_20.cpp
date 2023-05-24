@@ -33,7 +33,7 @@ void Excersize_2_20(int solution, int answer)
 	double tb = 0;
 
 	printf("\n");
-	printf("2-20 \n");
+	printf("2-20\n");
 	printf(" %5.2lf m/s 로 달리던 자동차 A 와 %6.2lf m/s 로 달리던 자동차 B 가 동시에 브레이크를 \n", A_car_initial_speed, B_car_initial_speed);
 	printf(" 밟아 일정하게 감속시켜서 자동차 A 는 %6.2lf s 만에 B 는 %6.2lf s 만에 정지하였다. \n\n", A_car_stopping_time, B_car_stopping_time);
 	printf("(a) 자동차 A와 B의 가속도의 크기는 각각 얼마인가? \n\n");
@@ -66,8 +66,8 @@ void Excersize_2_20(int solution, int answer)
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("자동차 A의 가속도의 크기: %6.2lf m/s^2 \n\n", A_car_magnitude_of_acceleration);
-		printf("자동차 B의 가속도의 크기: %6.2lf m/s^2 \n\n", B_car_magnitude_of_acceleration);
+		printf("aA = %6.2lf m/s^2 \n\n", A_car_magnitude_of_acceleration);
+		printf("aB = %6.2lf m/s^2 \n\n", B_car_magnitude_of_acceleration);
 
 		
 	}
@@ -100,7 +100,7 @@ void Excersize_2_20(int solution, int answer)
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("두 자동차의 속도가 같아지는 시간: %6.2lf s\n\n", t);
+		printf("t = %6.2lf s\n\n", t);
 
 
 	}
@@ -132,9 +132,9 @@ void Excersize_2_20(int solution, int answer)
 		printf("=========================   정 답   =============================\n\n");
 
 
-		printf("자동차 A가 간 거리: %6.2lf m\n\n", A_car_initial_speed * A_car_stopping_time + (1 / 2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
+		printf("xA = %6.2lf m\n\n", A_car_initial_speed * A_car_stopping_time + (1 / 2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
 
-		printf("자동차 B가 간 거리: %6.2lf m\n\n", B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
+		printf("xB = %6.2lf m\n\n", B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
 
 		
 	}
@@ -159,7 +159,7 @@ void Excersize_2_20(int solution, int answer)
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("자동차 B가 A와 같은 비율로 감속시킨다면 정지할 때까지 걸리는 시간: %6.2lf s\n\n", tb);
+		printf("t = %6.2lf s\n\n", tb);
 
 		printf("=================================================================\n");
 		printf("\n\n\n");
