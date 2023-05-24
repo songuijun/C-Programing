@@ -52,21 +52,24 @@ void Excersize_2_20(int solution, int answer)
 		printf("(a) 자동차 A와 B의 가속도의 크기는 각각 얼마인가? \n\n");
 
 		printf("관련 공식은 a = Δv / Δt \n");
-		printf("a: 가속도, Δv: 속도 변화량, Δt: 시간 변화량\n");
+		printf("a: 가속도, Δv: 속도 변화량, Δt: 시간 변화량, aA: a자동차의 가속도, aB: B자동차의 가속도\n");
 		printf("\n");
 
-		printf("A car  aA = %6.2lf m/s - %6.2lf m/s / %6.2lf s = %6.2lf m/s^2 \n", young, A_car_initial_speed, A_car_stopping_time, A_car_magnitude_of_acceleration);
-		printf("B car  aB = %6.2lf m/s - %6.2lf m/s / %6.2lf s = %6.2lf m/s^2 \n", young, B_car_initial_speed, B_car_stopping_time, B_car_magnitude_of_acceleration);
+		printf("aA = Δv / Δt \n");
+		printf("   = (%6.2lf m/s - %6.2lf m/s) / %6.2lf s\n", young, A_car_initial_speed, A_car_stopping_time);
+		printf("   = %6.2lf m/s^2\n\n", A_car_magnitude_of_acceleration);
 
-		printf("\n");
+		printf("aB = Δv / Δt \n");
+		printf("   = (%6.2lf m/s - %6.2lf m/s) / %6.2lf s\n", young, B_car_initial_speed, B_car_stopping_time);
+		printf("   = %6.2lf m/s^2\n\n", B_car_magnitude_of_acceleration);
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("자동차 A의 가속도의 크기: %6.2lf m/s^2 \n", A_car_magnitude_of_acceleration);
-		printf("자동차 B의 가속도의 크기: %6.2lf m/s^2 \n", B_car_magnitude_of_acceleration);
+		printf("자동차 A의 가속도의 크기: %6.2lf m/s^2 \n\n", A_car_magnitude_of_acceleration);
+		printf("자동차 B의 가속도의 크기: %6.2lf m/s^2 \n\n", B_car_magnitude_of_acceleration);
 
-		printf("\n");
+		
 	}
 
 
@@ -80,20 +83,26 @@ void Excersize_2_20(int solution, int answer)
 		printf("(b) 두 자동차의 속도가 같아지는 때는 브레이크를 밟은 후 몇 초 후인가? \n\n");
 
 		printf("관련 공식은 v = v0 + at \n");
-		printf("v: 나중 속도, v0: 처음 속도, a: 가속도, t: 시간\n");
+		printf("v: 나중 속도, v0: 처음 속도, a: 가속도, t: 시간, vA: A자동차의 속도, vB: B자동차의 속도\n");
 		printf("\n");
 
-		printf("vA = vB = v0 + at\n");
+		printf("vA = v0 + aAt\n");
+		printf("   = %6.2lf m/s + (%6.2lf m/s^2) * t\n\n", A_car_initial_speed, A_car_magnitude_of_acceleration);
+
+		printf("vB = v0 + aBt\n");
+		printf("   = %6.2lf m/s + (%6.2lf m/s^2) * t\n\n", B_car_initial_speed, B_car_magnitude_of_acceleration);
+
+		printf("vA = vB\n");
 		printf("%6.2lf m/s + (%6.2lf m/s^2) * t = %6.2lf m/s + (%6.2lf m/s^2) * t \n", A_car_initial_speed, A_car_magnitude_of_acceleration, B_car_initial_speed, B_car_magnitude_of_acceleration);
-		printf("                              t = %6.2lf s", t);
-		printf("\n");
+		printf("t = %6.2lf s\n\n", t);
+		
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("두 자동차의 속도가 같아지는 때는 브레이크를 밟은 후 %6.2lf s 후 입니다.\n ", t);
+		printf("두 자동차의 속도가 같아지는 시간: %6.2lf s\n\n", t);
 
-	
+
 	}
 
 
@@ -107,22 +116,27 @@ void Excersize_2_20(int solution, int answer)
 		printf("(c) 브레이크를 밟은 후 정지할 때까지 어떤 자동차가 얼마나 더 멀리갔는가? \n\n");
 
 		printf("관련 공식은 x = v0 * t + (1/2) * a * t^2\n");
-		printf("x: 거리, v0: 초기 속도 ,t: 시간 , a: 가속도\n");
-		printf("\n");
+		printf("x: 거리, v0: 초기 속도 ,t: 시간 , a: 가속도, xA: A자동차가 간 거리, xB: B자동차가 간 거리\n\n");
 
-		printf("A car  x = %6.2lf m/s * %6.2lf s  + (1/2) * (%6.2lf m/s^2) * %6.2lf s = %6.2lf m\n", A_car_initial_speed, A_car_stopping_time, A_car_magnitude_of_acceleration, A_car_stopping_time, A_car_initial_speed * A_car_stopping_time + (1 / 2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
-		printf("B car  x = %6.2lf m/s * %6.2lf s  + (1/2) * (%6.2lf m/s^2) * %6.2lf s = %6.2lf m\n", B_car_initial_speed, B_car_stopping_time, B_car_magnitude_of_acceleration, B_car_stopping_time, B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
+		printf("xA = v0 * t + (1/2) * aA * t^2\n");
+		printf("   = %6.2lf m/s * %6.2lf s  + (1/2) * (%6.2lf m/s^2) * %6.2lf s\n", A_car_initial_speed, A_car_stopping_time, A_car_magnitude_of_acceleration, A_car_stopping_time);
+		printf("   = %6.2lf m\n\n", A_car_initial_speed * A_car_stopping_time + (1 / 2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
 
-		printf("\n");
+		printf("xB = v0 * t + (1/2) * aB * t^2\n");
+		printf("   = % 6.2lf m / s * %6.2lf s + (1 / 2) * (% 6.2lf m / s ^ 2) * %6.2lf s\n", B_car_initial_speed, B_car_stopping_time, B_car_magnitude_of_acceleration);
+		printf("   = %6.2lf m\n\n", B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
+
+		
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-	
-		printf("A car x = %6.2lf m\n", A_car_initial_speed * A_car_stopping_time + (1 / 2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
-		printf("B car x = %6.2lf m", B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
 
-		printf("\n\n");
+		printf("자동차 A가 간 거리: %6.2lf m\n\n", A_car_initial_speed * A_car_stopping_time + (1 / 2) * A_car_magnitude_of_acceleration * A_car_stopping_time);
+
+		printf("자동차 B가 간 거리: %6.2lf m\n\n", B_car_initial_speed * B_car_stopping_time + (1 / 2) * B_car_magnitude_of_acceleration * B_car_stopping_time);
+
+		
 	}
 
 	if (solution == SHOW)
@@ -135,16 +149,17 @@ void Excersize_2_20(int solution, int answer)
 		printf("관련 공식은 v = v0 + at \n");
 		printf("v: 나중 속도, v0: 처음 속도, a: 가속도, t: 시간\n\n");
 
-		printf("%6.2lf m/s = %6.2lf m/s + %6.2lf * t\n",v, B_car_initial_speed, B_car_magnitude_of_acceleration);
-		printf("t = %6.2lf s\n", tb); 
+		printf("t = (v - v0) / a\n");
+		printf("  = (%6.2lf m/s - %6.2lf m/s) / %6.2lf m/s^2\n", v, B_car_initial_speed, B_car_magnitude_of_acceleration);
+		printf("  = %6.2lf s\n\n", tb);
 
 
-		printf("\n");
+		
 	}
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 
-		printf("자동차 B가 A와 같은 비율로 감속시킨다면 정지할 때까지 걸리는 시간은 %6.2lf s 입니다\n\n",tb);
+		printf("자동차 B가 A와 같은 비율로 감속시킨다면 정지할 때까지 걸리는 시간: %6.2lf s\n\n", tb);
 
 		printf("=================================================================\n");
 		printf("\n\n\n");
