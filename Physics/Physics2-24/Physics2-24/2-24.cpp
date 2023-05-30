@@ -48,12 +48,13 @@ void Excersize_2_24(int solution, int answer)
 
 		printf("g는 연직 아래 방향이므로 (-g)로 바뀌게 됩니다.\n\n");
 
-		printf("x = x0 + v0 * t + (1/2) * a * t^2 \n");
-		printf("%5.2lf m = (%5.2lf m) + (%5.2lf m) + t + (1/2) * (-%5.2lf m/s^2) * t^2 \n", height, x0, v0, gravitational_acceleration);
-		printf("t^2     = (%5.2lf m - %5.2lf m - %5.2lf s) / ( 1/2 * -%5.2lf m/s^2 )\n", height, x0, v0, gravitational_acceleration);
-		printf("        = -%5.2lf s \n\n", height / (1.0 / 2.0 * gravitational_acceleration));
+		printf("-x       = x0 + v0 * t + (1/2) * a * t^2 \n");
+		printf("-%5.2lf m = (%5.2lf m) + (%5.2lf m) + t + (1/2) * (-%5.2lf m/s^2) * t^2 \n", height, x0, v0, gravitational_acceleration);
+		printf("t^2      = (-%5.2lf m - %5.2lf m - %5.2lf s) / ( 1/2 * -%5.2lf m/s^2 )\n", height, x0, v0, gravitational_acceleration);
+		printf("         = %5.2lf s \n\n", height / (1.0 / 2.0 * gravitational_acceleration));
 
 		printf("t = √t^2\n");
+		printf("  = √%5.2lf s\n", height / (1.0 / 2.0 * gravitational_acceleration));
 		printf("  = %5.2lf s\n", t);
 
 		printf("\n");
@@ -85,7 +86,7 @@ void Excersize_2_24(int solution, int answer)
 	if (answer == SHOW) {
 		printf("=========================   정 답   =============================\n\n");
 		printf("수평으로 떨어지는 거리(x) = %5.2lf m \n\n", x);
-		
+
 		printf("=================================================================\n");
 		printf("\n\n\n");
 	}
