@@ -48,10 +48,11 @@ void Excersize_2_24(int solution, int answer)
 
         printf("중력 가속도는 아래 방향이므로 %6.2lf m/s^2 입니다.\n\n", -gravitational_acceleration);
 
-        printf("x        = x0 + v0 * t + (1/2) * a * t^2\n");
-        printf("%5.2lf  m = (%5.2lf m) + (%5.2lf m) * t + (1/2) * (-%5.2lf m/s^2) * t^2 \n", x0, -height, v0, gravitational_acceleration);
-        printf("t^2      = (%5.2lf m - %5.2lf m/s) / ( 1/2 * -%5.2lf m/s^2 )\n", -height, v0 * t, gravitational_acceleration);
-        printf("         = %5.2lf s \n\n", height / (1.0 / 2.0 * gravitational_acceleration));
+        printf("x       = x0 + v0 * t + (1/2) * a * t^2\n");
+        printf("%5.2lf m = (%5.2lf m) + (%5.2lf m) * t + (1/2) * (-%5.2lf m/s^2) * t^2 \n", x0, -height, v0, gravitational_acceleration);
+        printf("%5.2lf m = (1/2) * (-%5.2lf m/s^2) * t^2 \n", height, gravitational_acceleration);
+        printf("t^2     = (%5.2lf m - %5.2lf m/s) / ( 1/2 * -%5.2lf m/s^2 )\n", -height, v0 * t, gravitational_acceleration);
+        printf("        = %5.2lf s \n\n", height / (1.0 / 2.0 * gravitational_acceleration));
 
         printf("t = √t^2\n");
         printf("  = √%5.2lf s\n", height / (1.0 / 2.0 * gravitational_acceleration));
@@ -78,7 +79,7 @@ void Excersize_2_24(int solution, int answer)
         printf("x: 수평거리, x0: 초기거리, v0: 초기 속도, t: 시간 \n\n");
 
         printf("x = x0 + v0 * t  \n");
-        printf("  = %5.2lf + %5.2lf m/s * %5.2lf s \n", x0, second_velocity, t);
+        printf("  = %5.2lf m + %5.2lf m/s * %5.2lf s \n", x0, second_velocity, t);
         printf("  = % 5.2lf m \n", x);
 
         printf("\n");
