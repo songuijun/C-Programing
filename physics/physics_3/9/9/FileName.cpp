@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _USE_MATH_DEFINES     // M_PI¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ Ãß°¡
+#define _USE_MATH_DEFINES     // M_PIë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œ ì¶”ê°€
 #include <math.h>
 #include <time.h>
 
@@ -18,50 +18,60 @@ void Excersize_3_9(int solution, int answer)
     srand(time(NULL));
     double speed = 41.0; //+rand() % (10 + 1) - 4;
     double angle = 60; // +rand() % (10 + 1) - 2;
-    double Changed_Speed= 25.0;
+    double Changed_Speed = 25.0;
     double First_hour = 3;
     double Later_hour = 4.50;
+    double x2 = 0;
 
 
     printf("\n");
     printf("3-9 \n");
-    printf("Á¦ÁÖµµ¿¡ ÅÂÇ³ÀÌ Áö³ª°¡°í ÀÖ´Ù.\n");
-    printf("¼Óµµ°¡ %5.2lf km/h ÀÎ ÅÂÇ³ÀÇ ´«ÀÌ ¼­ºÏÂÊ %5.2lf ¡Æ ¹æÇâÀ¸·Î Åë°úÇØ Áö³ª°£´Ù.\n", speed, angle);
-    printf("3½Ã°£ ÈÄ ÀÌ ÅÂÇ³ÀÇ ¹æÇâÀÌ ºÏÂÊÀ¸·Î %5.2lf km/h ÀÇ ´À¸° ¼Óµµ·Î ¹Ù²î¾ú´Ù. \n\n", Changed_Speed);
-    printf("Á¦ÁÖµµ¸¦ Áö³­ ÅÂÇ³Àº %5.2lf h ÈÄ¿¡´Â Á¦ÁÖµµ¿¡¼­ ¾ó¸¶³ª ¸Ö¸® °¬À»±î?\n", Later_hour);
+    printf("ì œì£¼ë„ì— íƒœí’ì´ ì§€ë‚˜ê°€ê³  ìˆë‹¤.\n");
+    printf("ì†ë„ê°€ %5.2lf km/h ì¸ íƒœí’ì˜ ëˆˆì´ ì„œë¶ìª½ %5.2lf Â° ë°©í–¥ìœ¼ë¡œ í†µê³¼í•´ ì§€ë‚˜ê°„ë‹¤.\n", speed, angle);
+    printf("3ì‹œê°„ í›„ ì´ íƒœí’ì˜ ë°©í–¥ì´ ë¶ìª½ìœ¼ë¡œ %5.2lf km/h ì˜ ëŠë¦° ì†ë„ë¡œ ë°”ë€Œì—ˆë‹¤. \n\n", Changed_Speed);
+    printf("ì œì£¼ë„ë¥¼ ì§€ë‚œ íƒœí’ì€ %5.2lf h í›„ì—ëŠ” ì œì£¼ë„ì—ì„œ ì–¼ë§ˆë‚˜ ë©€ë¦¬ ê°”ì„ê¹Œ?\n", Later_hour);
 
     if (solution == SHOW)
     {
         printf("\n");
-        printf("=========================   Ç® ÀÌ   =============================\n\n");
+        printf("=========================   í’€ ì´   =============================\n\n");
         // your code here
-       
 
-        printf("%5.2lf h ÈÄ ÅÂÇ³ÀÇ °Å¸®\n\n", Later_hour);
+        printf("ê´€ë ¨ ê³µì‹ì€ d = s * t\n");
+        printf("d: ê±°ë¦¬, s: ì†ë„, t: ì‹œê°„, cos: ì‚¼ê°í•¨ìˆ˜ì—ì„œ x ì„±ë¶„, sin: ì‚¼ê°í•¨ìˆ˜ì—ì„œ y ì„±ë¶„, r: ë³€ìœ„\n\n");
 
-        printf("°ü·Ã °ø½ÄÀº d = s * t\n");
-        printf("d: °Å¸® s: ¼Óµµ t: ½Ã°£ cos: À§Ä¡ sin: ¹æÇâ\n\n");
-        printf("ºÏ¼­ÂÊ ÀÌµ¿°Å¸®\n");
-        printf("ºÏ¼­ÂÊ º¯À§: %5.2lf km/h * %5.2lf h = %5.2lf km/h\n",speed, First_hour,speed* First_hour);
-        printf("x1 : r cos¥è = %5.2lf km/h cos %5.2lf ¡Æ = %5.2lf km\n", speed * First_hour, angle,(speed * First_hour) * cos(DEG2RAD(angle)));
-        printf("y1 : r sin¥è = %5.2lf km/h sin %5.2lf ¡Æ = %5.2lf km\n\n", speed * First_hour, angle,(speed * First_hour) * sin(DEG2RAD(angle)));
-        
-        
-        printf("ºÏÂÊ ÀÌµ¿°Å¸®\n");
-        printf("x2 : 0 km\n");
-        printf("y2 : %5.2lf km/h * %5.2lf h = %5.2lf km \n\n", Changed_Speed, Later_hour, Changed_Speed* Later_hour);
+        printf("ë¶ì„œìª½ ì´ë™ê±°ë¦¬\n");
+        printf("ë¶ì„œìª½ ë³€ìœ„: %5.2lf km/h * %5.2lf h = %5.2lf km/h\n", speed, First_hour, speed * First_hour);
+        printf("x1 = r * cosÎ¸\n");
+        printf("   = %5.2lf km/h * cos %5.2lf \n", speed * First_hour, angle);
+        printf("   = %5.2lf km\n", (speed * First_hour) * cos(DEG2RAD(angle)));
+
+        printf("y1 = r * sinÎ¸\n");
+        printf("   = %5.2lf km/h * sin %5.2lf \n", speed * First_hour, angle);
+        printf("   = %5.2lf km\n\n", (speed * First_hour) * sin(DEG2RAD(angle)));
+
+        printf("ë¶ìª½ ì´ë™ê±°ë¦¬\n");
+        printf("x2 : %5.2lf km\n",x2);
+        printf("y2 : %5.2lf km/h * %5.2lf h = %5.2lf km \n\n", Changed_Speed, Later_hour, Changed_Speed * Later_hour);
 
         printf("x = x1 + x2\n");
-        printf("y = y1 + y2\n");
+        printf("  = %5.2lf km + %5.2lf km\n", (speed * First_hour) * cos(DEG2RAD(angle)), x2);
+        printf("  = %5.2lf km\n\n", (x2 + (speed * First_hour) * cos(DEG2RAD(angle))));
 
-        printf("\n");
+        printf("y = y1 + y2\n");
+        printf("  = %5.2lf km + %5.2lf km\n", (speed * First_hour) * sin(DEG2RAD(angle)), Changed_Speed * Later_hour);
+        printf("  = %5.2lf km\n\n", ((speed * First_hour) * sin(DEG2RAD(angle)) + Changed_Speed * Later_hour));
+
+        
     }
     if (answer == SHOW) {
-        printf("=========================   Á¤ ´ä   =============================\n\n");
+        printf("=========================   ì • ë‹µ   =============================\n\n");
 
-        printf("x = %5.2lf km\n", ((speed * First_hour) * cos(DEG2RAD(angle)))+0);
-        printf("y = %5.2lf km\n",((speed * First_hour) * sin(DEG2RAD(angle)))+ Changed_Speed * Later_hour);
-        
+
+        printf("x = %5.2lf km\n\n", ((speed * First_hour) * cos(DEG2RAD(angle))) + 0);
+
+        printf("y = %5.2lf km\n\n", ((speed * First_hour) * sin(DEG2RAD(angle))) + Changed_Speed * Later_hour);
+
     }
 
 }
