@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _USE_MATH_DEFINES     // M_PI¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ Ãß°¡
+#define _USE_MATH_DEFINES     // M_PIë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œ ì¶”ê°€
 #include <math.h>
 #include <time.h>
 
@@ -20,7 +20,7 @@ void Excersize_3_21(int solution, int answer)
 
     double mass = 7.3; //+rand() % (10 + 1) - 4;
     double angle = 40; // +rand() % (10 + 1) - 2;
-    double the_height_of_the_ground= 2.2;
+    double the_height_of_the_ground = 2.2;
     double the_initial_speed = 14;
     double g = 9.8;
     double t;
@@ -31,19 +31,19 @@ void Excersize_3_21(int solution, int answer)
     double e;
 
 
-    
+
 
     printf("\n");
     printf("3-21 \n");
-    printf("ÅõÆ÷È¯ ¼±¼ö°¡ Æ÷È¯À» ´øÁö±â À§ÇØ Æ÷È¯À» °¡¼Ó ½ÃÅ²´Ù\n");
-    printf("¸¸¾à Áú·®ÀÌ %5.2lf kgÀÎ Æ÷È¯À» ¼öÆò¸é¿¡ ´ëÇØ %5.2lf ¡ÆÀÇ °¢À» ÀÌ·ç¸é¼­\n", mass, angle);
-    printf("ÃÊ¼Óµµ %5.2lf m/s·Î ´øÁ³´Ù°í ÇÏÀÚ. \n\n", the_initial_speed);
-    printf("Áö¸é¿¡¼­ %5.2lf m ³ôÀÌ¿¡¼­ Æ÷È¯ÀÌ ¼±¼öÀÇ ¼ÕÀ» ¶°³µÀ»¶§, Æ÷È¯ÀÌ ³¯¾Æ°£ ¼öÆò°Å¸®´Â ¾ó¸¶ÀÎ°¡?\n", the_height_of_the_ground);
+    printf("íˆ¬í¬í™˜ ì„ ìˆ˜ê°€ í¬í™˜ì„ ë˜ì§€ê¸° ìœ„í•´ í¬í™˜ì„ ê°€ì† ì‹œí‚¨ë‹¤\n");
+    printf("ë§Œì•½ ì§ˆëŸ‰ì´ %5.2lf kgì¸ í¬í™˜ì„ ìˆ˜í‰ë©´ì— ëŒ€í•´ %5.2lf Â°ì˜ ê°ì„ ì´ë£¨ë©´ì„œ\n", mass, angle);
+    printf("ì´ˆì†ë„ %5.2lf m/së¡œ ë˜ì¡Œë‹¤ê³  í•˜ì. \n\n", the_initial_speed);
+    printf("ì§€ë©´ì—ì„œ %5.2lf m ë†’ì´ì—ì„œ í¬í™˜ì´ ì„ ìˆ˜ì˜ ì†ì„ ë– ë‚¬ì„ë•Œ, í¬í™˜ì´ ë‚ ì•„ê°„ ìˆ˜í‰ê±°ë¦¬ëŠ” ì–¼ë§ˆì¸ê°€?\n", the_height_of_the_ground);
 
     if (solution == SHOW)
     {
         printf("\n");
-        printf("=========================   Ç® ÀÌ   =============================\n\n");
+        printf("=========================   í’€ ì´   =============================\n\n");
         // your code here
         a = 0.5 * (-g);
         b = (the_initial_speed)*sin(DEG2RAD(angle));
@@ -53,43 +53,50 @@ void Excersize_3_21(int solution, int answer)
         d = b * b - 4.0 * a * c;
         e = sqrt(d);
         t = (-b - e) / (2.0 * a);
-    
+
+
+        printf("ê´€ë ¨ê³µì‹ v0y = V0 * sinÎ¸\n");
+        printf("v0y: ì´ˆê¸°, y: ì†ë„, v0: ì´ˆê¸° ì†ë„, sinÎ¸: ìœ„ì¹˜/ë°©í–¥\n\n");
+
+        printf("ê´€ë ¨ê³µì‹ y = y0 + v0 * t + 1/2 * a * t^2\n");
+        printf("y: ë‚˜ì¤‘ìœ„ì¹˜, y0: ì´ˆê¸°ìœ„ì¹˜ , v0: ì´ˆê¸°ì†ë„,  t: ì‹œê°„, a: ê°€ì†ë„\n\n");
+
+        printf("ê´€ë ¨ê³µì‹ Î”x = v x t\n");
+        printf("Î”x: ê±°ë¦¬, v: ì†ë ¥, t: ì‹œê°„\n\n");
+
+        printf("ì¤‘ë ¥ ê°€ì†ë„ëŠ” ì•„ë˜ ë°©í–¥ì´ë¯€ë¡œ %6.2lf m/s^2 ì…ë‹ˆë‹¤.\n\n", -g);
+
+
+        printf("ìˆ˜ì§ìš´ë™\n");
+        printf("v0y = v0 * sinÎ¸\n");
+        printf("    = %5.2lf m / s * sin %5.2lf Â°\n", the_initial_speed, angle );
+        printf("    = %5.2lf m/s\n\n", (the_initial_speed)*sin(DEG2RAD(angle)));
+
+
+
+        printf("y   = y0 + v0yt + (1/2) * a * t^2\n");
+        printf("0m  = %5.2lf m + %5.2lf * t + (1/2) * (%5.2lf m/s^2) * t^2\n", the_height_of_the_ground, (the_initial_speed)*sin(DEG2RAD(angle)), -g);
+        printf("%5.2lft^2 - %5.2lf * t - %5.2lf  = 0\n", (g/2), (the_initial_speed)*sin(DEG2RAD(angle)), the_height_of_the_ground);
+        printf("t   = %5.2lf s or %5.2lf s\n\n", (-b - e) / (2.0 * a), (-b + e) / (2.0 * a));
+
+        printf("ìˆ˜í‰ìš´ë™\n");
+        printf("Î”x  = v0x * t\n");
+        printf("    = %5.2lf m/s * %5.2lf s\n", (the_initial_speed)*sin(DEG2RAD(angle)), t);
+        printf("    = %5.2lf m/s\n", (the_initial_speed)*sin(DEG2RAD(angle)) * t);
 
 
 
 
-  
-        
-
-        printf("Æ÷È¯ÀÌ ³¯¾Æ°£ ¼öÆò°Å¸®´Â ¾ó¸¶ÀÎ°¡?\n\n");
-
-        printf("¼öÁ÷¿îµ¿\n");
-        printf("°ü·Ã°ø½ÄÀº V0y = V0 * sin¥è\n");
-        printf("V0y:  ÃÊ±â y ¼Óµµ V0: ÃÊ±â ¼Óµµ sin¥è: À§Ä¡/¹æÇâ\n");
-        printf("           V0y = %5.2lf m/s * sin %5.2lf ¡Æ= %5.2lf m/s\n\n", the_initial_speed, angle, (the_initial_speed) * sin(DEG2RAD(angle)));
-        printf("y  = y0 * V0yt + (1/2) * a * t^2\n");
-        printf("0m = %5.2lf m * %5.2lf * t - (1/2) * %5.2lf m/s^2* t^2\n", the_height_of_the_ground, (the_initial_speed)*sin(DEG2RAD(angle)),g);
-        printf("at^2 + bt + c = 0\n\n");
-        printf("t = %5.2lf s or %5.2lf s\n\n", (-b - e) / (2.0 * a), (-b + e) / (2.0 * a));
-
-        printf("¼öÆò¿îµ¿\n");
-        printf("°ü·Ã°ø½ÄÀº ¥Äx = V0 * x * t\n");
-        printf("              = %5.2lf m/s * %5.2lf s\n", (the_initial_speed)*sin(DEG2RAD(angle)),t);
-        printf("              = %5.2lf m/s\n", (the_initial_speed)*sin(DEG2RAD(angle))*t);
 
 
 
-
-
-
-       
 
         printf("\n");
     }
     if (answer == SHOW) {
-        printf("=========================   Á¤ ´ä   =============================\n\n");
-        printf("¥Äx = %5.2lf m/s\n", (the_initial_speed)*sin(DEG2RAD(angle)) * t);
-        
+        printf("=========================   ì • ë‹µ   =============================\n\n");
+        printf("Î”x = %5.2lf m/s\n", (the_initial_speed)*sin(DEG2RAD(angle)) * t);
+
     }
 
 }
