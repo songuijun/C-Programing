@@ -1,0 +1,13 @@
+﻿  소스.cpp
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(18,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(89,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(99,12): warning C4101: 'm_2' :참조되지 않은 지역 변수입니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(168,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(203,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(280,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(326,49): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(326,49): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 0개 필요하지만 1개가 제공되었습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(354,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(389,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\all\소스.cpp(391,55): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  all.vcxproj -> C:\미래모빌리티공학과\모빌리티프로그래밍\202315010_UiJunSONG\4장 취합\all\x64\Debug\all.exe
