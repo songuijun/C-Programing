@@ -2,21 +2,17 @@
 #include <stdio.h>
 #include <math.h>
 #define M_PI 3.14
-
 int main()
 {
     double R, L, C;
-    printf("ÀúÇ×±âÀÇ °ª RÀ» ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä : ");
+    printf("Rì„ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš” : ");
     scanf("%lf", &R);
-    printf("ÄÚÀÏÀÇ À¯µµ°è¼ö LÀ» ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä : ");
+    printf("Lì„ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš” : ");
     scanf("%lf", &L);
-    printf("ÃàÀü±âÀÇ Àü±â¿ë·® C¸¦ ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä : ");
+    printf("Cë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš” : ");
     scanf("%lf", &C);
-
     printf("\n");
-
-    printf(" f = 60.0 Hz, Vmax = 1.50 x 10©÷ V\n\n");
-
+    printf(" f = 60.0 Hz, Vmax = 1.50 x 10Â² V\n");
     double mirco_C = C * pow(10, -6);
     double f = 60.0;
     double V_max = 1.50 * pow(10, 2);
@@ -28,13 +24,11 @@ int main()
     double V_R_max = I_max * R;
     double V_L_max = I_max * X_L;
     double V_C_max = I_max * X_C;
-
-    printf("ÀÓÇÇ´ø½º                  : %.0lf ¥Ø\n", Z);
-    printf("ÃÖ´ëÀü·ù                  : %.3lf A\n", I_max);
-    printf("À§»ó°¢                    : %.1lf ¡Æ\n", phi);
-    printf("ÀúÇ×¿¡ °É¸®´Â ÃÖ´ëÀü¾Ğ    : %.1lf V\n", V_R_max);
-    printf("ÄÚÀÏ¿¡ °É¸®´Â ÃÖ´ëÀü¾Ğ    : %.1lf V\n", V_L_max);
-    printf("ÃàÀü±â¿¡ °É¸®´Â ÃÖ´ëÀü¾Ğ  : % .0lf V\n", V_C_max);
-
+    printf("ì„í”¼ë˜ìŠ¤                  : %.0lf Î©\n", Z);
+    printf("ìµœëŒ€ì „ë¥˜                  : %.3lf A\n", I_max);
+    printf("ìœ„ìƒê°                    : %.1lf Â°\n", phi);
+    printf("ì €í•­ì— ê±¸ë¦¬ëŠ” ìµœëŒ€ì „ì••    : %.1lf V\n", V_R_max);
+    printf("ì½”ì¼ì— ê±¸ë¦¬ëŠ” ìµœëŒ€ì „ì••    : %.1lf V\n", V_L_max);
+    printf("ì¶•ì „ê¸°ì— ê±¸ë¦¬ëŠ” ìµœëŒ€ì „ì••  : % .0lf V\n", V_C_max);
     return 0;
 }
